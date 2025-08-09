@@ -6,19 +6,32 @@ import UserCard from "./components/UserCard";
 // Map, ForEach, Filter
 
 function App() {
+  const products = [
+    {
+      title: "Car",
+      desc: "A fast car",
+      img: "https://mgmotors.com.pk/_next/image?url=%2Fassets%2Fcropped-webp-models%2FMG4-crop.webp&w=1080&q=75",
+    },
+    { title: "Book", desc: "An interesting book", img: "book.jpg" },
+    { title: "Bike", desc: "A mountain bike", img: "bike.jpg" },
+    { title: "Car", desc: "A luxury car", img: "luxury-car.jpg" },
+    { title: "Laptop", desc: "A sports car", img: "sports-car.jpg" },
+  ];
   return (
     <div>
       <NavBar />
       <Container className="mt-4">
-        <h1>Welcome to My App</h1>
+        <h1>My Products</h1>
         <div className="d-flex flex-wrap gap-3">
-          <UserCard title="Car" desc="abc" img="" />
-          <UserCard title="Book" desc="abc" img="" />
-          <UserCard title="Bike" desc="abc" img="" />
-          <UserCard title="Car" desc="abc" img="" />
-          <UserCard title="Car" desc="abc" img="" />
-          <UserCard title="Car" desc="abc" img="" />
-          <UserCard title="Car" desc="abc" img="" />
+          {products.map((product) => {
+            return (
+              <UserCard
+                title={product.title}
+                desc={product.desc}
+                img={product.img}
+              />
+            );
+          })}
         </div>
       </Container>
     </div>
