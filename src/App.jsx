@@ -5,8 +5,6 @@ import ProductCard from "./components/ProductCard";
 import AddProduct from "./components/AddProduct";
 import { useState } from "react";
 
-// Map, ForEach, Filter
-
 function App() {
   const [products, setProducts] = useState([
     {
@@ -24,6 +22,7 @@ function App() {
     <div>
       <NavBar />
       <Container className="mt-4">
+        {/* state drilling */}
         <AddProduct setProducts={setProducts} products={products} />
         <h1>My Products</h1>
         <div className="d-flex flex-wrap gap-3">
