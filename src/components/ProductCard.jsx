@@ -2,7 +2,7 @@ import { Button } from "react-bootstrap";
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
 
-function UserCard({ title, desc, img }) {
+function ProductCard({ title, desc, img }) {
   return (
     <Card style={{ width: "18rem" }}>
       <Card.Img variant="top" src={img} />
@@ -15,4 +15,4 @@ function UserCard({ title, desc, img }) {
   );
 }
 
-export default UserCard;
+export default ProductCard;
